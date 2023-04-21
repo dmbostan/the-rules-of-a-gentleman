@@ -1,4 +1,6 @@
-const NavigationButton = ({direction, children, step, setStep, stepsTotal}) => {
+import {NavigationButtonProperties} from "./NavigationButton.types";
+
+const NavigationButton = ({direction, children, step, setStep, stepsTotal} : NavigationButtonProperties) => {
 
     const handleNavigation = () => {
         const isBackward = direction === 'backward';
