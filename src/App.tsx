@@ -2,6 +2,7 @@ import { ReactComponent as Logo } from '../src/assets/logo.svg'
 import {useEffect, useState} from "react";
 import Heading from "./components/Heading/Heading";
 import NavigationButton from "./components/NavigationButton/NavigationButton";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
@@ -22,11 +23,6 @@ function App() {
         <Heading step={activeStep} />
         {rules[activeStep]}
          <br/>
-        {/*<button onClick={() => {*/}
-        {/*    setActiveStep(activeStep + 1)*/}
-        {/*}}>*/}
-        {/*    Next*/}
-        {/*</button>*/}
         <NavigationButton direction="backward" step={activeStep} setStep={setActiveStep} stepsTotal={rules.length}>
             Prev
         </NavigationButton>
@@ -36,6 +32,7 @@ function App() {
         <NavigationButton direction="forward" step={activeStep} setStep={setActiveStep} stepsTotal={rules.length}>
             Next
         </NavigationButton>
+        <Footer />
     </div>
   )
 }
